@@ -141,6 +141,8 @@ static bool getGralloc4Array(MetaData_t *metadata, int32_t paramType) {
           ->isVendorMetadataSet[GET_VENDOR_METADATA_STATUS_INDEX(QTI_VIDEO_TS_INFO)];
     case GET_S3D_FORMAT:
       return metadata->isVendorMetadataSet[GET_VENDOR_METADATA_STATUS_INDEX(QTI_S3D_FORMAT)];
+    case SET_UNUSED:
+      return false;
     default:
       ALOGE("paramType %d not supported", paramType);
       return false;
